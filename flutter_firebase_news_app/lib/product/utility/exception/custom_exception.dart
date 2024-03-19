@@ -1,4 +1,5 @@
 class FirebaseCustomException implements Exception{
+  FirebaseCustomException(this.description);
   late final String description;
 
   @override

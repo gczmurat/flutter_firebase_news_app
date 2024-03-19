@@ -39,6 +39,7 @@ class ImageConstants {
   static const String times = 'assets/icon/times.png';
   static const String user = 'assets/icon/user.png';
   static const String windowGrid = 'assets/icon/window-grid.png';
+  static const String appLogo = 'assets/icon/logo-icon.png';
 
 }
 

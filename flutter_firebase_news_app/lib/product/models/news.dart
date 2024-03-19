@@ -1,10 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_firebase_news_app/product/utility/base/base_firebase_model.dart';
 
-class news extends Equatable {
+
+class news extends Equatable implements IdModel, BaseFirebaseModel<news> {
+
   String? ctegory;
   String? categoryId;
   String? title;
   String? banner;
+  @override
   String? id;
 
   news({
@@ -44,7 +49,9 @@ class news extends Equatable {
     };
   }
 
-  factory news.fromJson(Map<String, dynamic> json) {
+  @override
+  news fromJson(Map<String, dynamic> json) {
+    // TODO: implement fromJson
     return news(
       ctegory: json['ctegory'] as String?,
       categoryId: json['categoryId'] as String?,
@@ -52,5 +59,12 @@ class news extends Equatable {
       banner: json['banner'] as String?,
       id: json['id'] as String?,
     );
+  }
+
+  @override
+  news? fromFirebase(DocumentSnapshot<Map<String, dynamic>> snapshot) {
+    // TODO: implement fromFirebase
+    throw UnimplementedError();
+    
   }
 }
