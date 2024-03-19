@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_news_app/feature/splash/splash_view.dart';
 import 'package:flutter_firebase_news_app/product/initialize/application_start.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,14 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      title: 'Nuntium News App',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+        body: SplashView(),
       ),
     );
   }
